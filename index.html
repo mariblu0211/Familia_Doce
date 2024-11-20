@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Família Doce</title>
+    <style>
+        /* Estilo geral */
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(img1.jpeg);
+            background-color: #f1d5d9;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #4A2F27;
+        }
+        header {
+            background-color: #f78d9e;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 10px auto;
+            max-width: 670px;
+            max-height: 100px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #4A2F27;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .sobre-item {
+            background-color: #FFC0CB;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 10px auto;
+            max-width: 700px;
+            max-height: 700px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #351616;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #f3d00b;
+            color: #4A2F27;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #FFEC8B;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #4A2F27;
+            color: #FFF;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 2rem;
+                padding: 20px;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+
+            .sobre-item {
+                padding: 20px;
+                margin: 10px 20px;
+                max-width: 90%;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+
+            ul li {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.5rem;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+
+            ul li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Bem-vindo à Família Doce
+    </header> 
+    <section id="sobre" class="section">
+        <div class="sobre-item">
+            <h1>SOBRE NÓS</h1>
+            <p><strong>MISSÃO:</strong><br>
+            Oferecer doces artesanais de qualidade, feitos com carinho e tradição, para proporcionar momentos de felicidade e sabor em cada pedaço. Nossa missão é criar experiências únicas e aconchegantes, como um abraço de família.</p> 
+            <p><strong>VISÃO:</strong><br>
+                Ser a principal escolha de doces artesanais no Brasil, sendo reconhecida pela qualidade, sabor e cuidado com cada detalhe. Queremos expandir nossa marca e fazer parte dos momentos mais doces da vida das pessoas.</p>
+            <p><strong>VALORES:</strong></p>
+                <ul>
+                    <li>Qualidade;</li>
+                    <li>Tradição;</li>
+                    <li>Afeto;</li>
+                    <li>Sustentabilidade.</li>
+                </ul>
+        </div>
+        <a href="cardapio.html" id="cardapio" class="button">CONHEÇA NOSSO CARDÁPIO</a>
+    </section>
+   <footer>
+        Desenvolvido por Maria Luiza
+    </footer>
+</body>
+</html>

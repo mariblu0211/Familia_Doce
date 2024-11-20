@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Interativo</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF3E6;
+            color: #4A2F27;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between; /* Garante que o footer fique no final */
+            height: 100vh; /* Garante que a altura da tela seja preenchida */
+            background-image: url(img1.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 40px;
+            color: #4A2F27;
+            background: linear-gradient(45deg, rgba(255, 223, 186, 0.9), rgba(255, 203, 165, 0.9));
+            padding: 30px 60px;
+            border-radius: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #FFD700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .circle:hover {
+            transform: scale(1.1);
+        }
+
+        .flavor-box {
+            width: 300px;
+            height: auto;
+            background-color: #FFF;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+            padding: 30px;
+            display: none;
+        }
+
+        .flavor-box .flavor {
+            font-size: 1.5rem;
+            color: #4A2F27;
+            padding: 25px 40px;
+            background-color: #FFCC99;
+            border-radius: 8px;
+            text-align: center;
+            width: 80%;
+            font-weight: bold;
+        }
+
+        .flavor-box h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #A52A2A;
+        }
+
+        .flavor-box p {
+            font-size: 1rem;
+            color: #4A2F27;
+        }
+
+        .button {
+            background-color: #FF69B4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .button:hover {
+            background-color: #FFB6C1;
+        }
+
+        #cardapio {
+            display: inline-block;
+            background-color: #f3d00b;
+            color: #4A2F27;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        #cardapio.button:hover {
+            background-color: #FFEC8B;
+        }
+
+        footer {
+            background-color: #4A2F27;
+            color: #FFF;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1rem;
+            width: 100%;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+                padding: 15px 30px;
+            }
+
+            footer {
+                padding: 10px 0;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+
+            .circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            .flavor-box {
+                width: 90%;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .flavor-box .flavor {
+                font-size: 1.2rem;
+                padding: 10px 15px;
+            }
+
+            #cardapio {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+                padding: 10px 20px;
+            }
+
+            .circle {
+                width: 100px;
+                height: 100px;
+            }
+
+            .flavor-box {
+                gap: 10px;
+                padding: 10px;
+                width: 100%;
+            }
+
+            .flavor-box .flavor {
+                font-size: 1rem;
+                padding: 8px 12px;
+            }
+
+            .button {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+
+            #cardapio {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <h1>
+    Cardápio
+  </h1>
+    <div class="menu-container">
+        <!-- Círculos -->
+        <div class="circle" onclick="showFlavorBox(1)">
+            <img src="bolo.jpeg" alt="Bolos">
+        </div>
+        <div class="circle" onclick="showFlavorBox(2)">
+            <img src="brownie.jpeg" alt="Brownies">
+        </div>
+        <div class="circle" onclick="showFlavorBox(3)">
+            <img src="trufas.jpeg" alt="Trufas">
+        </div>
+        <div class="circle" onclick="showFlavorBox(4)">
+            <img src="doces_caseiros.jpeg" alt="Doces caseiros">
+        </div>
+        <div class="circle" onclick="showFlavorBox(5)">
+            <img src="cestas.jpeg" alt="Cestas personalizadas">
+        </div>
+    </div>
+
+    <!-- Quadrado com sabores -->
+    <div class="flavor-box" id="flavorBox">
+        <h3>Sabores Disponíveis</h3>
+        <p id="flavors">Lista de sabores aqui...</p>
+        <button class="button" onclick="hideFlavorBox()">Voltar</button>
+    </div>
+    <a href="extra.html" id="cardapio"class="button">FERRAMENTAS DE ANÁLISE</a>
+
+    <footer>
+        Desenvolvido por Maria Luiza
+    </footer>
+    <script>
+        function showFlavorBox(item) {
+            const flavorBox = document.getElementById('flavorBox');
+            const flavors = document.getElementById('flavors');
+            
+            let flavorText = '';
+            switch (item) {
+                case 1:
+                    flavorText = 'Chocolate, Ninho, Baunilha, Castanha do Pará, Abacaxi, Cupuaçu';
+                    break;
+                case 2:
+                    flavorText = 'Maracujá, Chocolate';
+                    break;
+                case 3:
+                    flavorText = 'Brigadeiro, Ninho, Limão, Morango, Maracujá, Coco';
+                    break;
+                case 4:
+                    flavorText = 'Doce de leite, Beijinho, Brigadeiro';
+                    break;
+                case 5:
+                    flavorText = 'Dia dos Namorados, Dia das Mães, Dias dos Pais, Páscoa, Natal, entre outras ocasiões';
+                    break;
+                default:
+                    flavorText = 'Sem sabores disponíveis.';
+            }
+            
+            flavors.innerText = flavorText;
+            flavorBox.style.display = 'flex';
+        }
+
+        function hideFlavorBox() {
+            const flavorBox = document.getElementById('flavorBox');
+            flavorBox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
